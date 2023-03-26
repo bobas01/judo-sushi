@@ -1,0 +1,1102 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header nav ul,
+footer nav ul {
+    list-style-type: none;
+}
+
+/* header phone */
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+}
+
+header .row-limit-size {
+    height: 50px;
+
+}
+
+#main-menu {
+    display: none;
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+
+    z-index: 9999;
+
+}
+.logo:hover img:first-child {
+    animation: logo-animation 0.5s ease-in;
+    
+}
+
+@keyframes logo-animation {
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#main-menu.active {
+    display: block;
+    opacity: 1;
+}
+
+#main-menu ul {
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+
+}
+
+
+#burger {
+    display: block;
+    position: absolute;
+    float: right;
+    top: 10%;
+    right: 2%;
+    cursor: pointer;
+
+}
+
+
+#main-menu>ul>li {
+    width: 100%;
+    border: 1px solid #999;
+    background-color: white;
+}
+
+#main-menu>ul>li>a {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 0 15px;
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.5s ease;
+}
+
+#main-menu.active>ul>li:hover>a {
+    background-color: white;
+
+}
+
+
+
+/*header tablet*/
+@media screen and (min-width: 850px) {
+    header {
+        height: 60px;
+        width: 100vw;
+    }
+
+    .row-limit-size {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .logo {
+        float: left;
+        width: 40%;
+    }
+
+   
+
+
+    #main-menu {
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 550px;
+        overflow: auto;
+        position: inherit;
+        top: inherit;
+        z-index: inherit;
+        width: 60%;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #main-menu ul {
+        display: flex;
+        flex-direction: inherit;
+        list-style-type: none;
+        width: 100%;
+    }
+
+    #main-menu>ul>li {
+        width: inherit;
+        border: inherit;
+        margin: 0 auto;
+    }
+
+    #main-menu>ul>li>a {
+        padding: inherit;
+        height: 50px;
+        line-height: 50px;
+        transition: all 0.5s ease;
+        background-color: #FFF;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        height: 75px;
+        line-height: 100px;
+    }
+
+    .row-limit-size {
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #main-menu {
+        width: 40%;
+        padding-top: 20px;
+    }
+
+    header .logo {
+        width: 40%;
+    }
+
+}
+
+
+/*body section presentation phone*/
+#presentation {
+    background-image: url(../img/img\ principal.svg);
+    overflow: auto;
+    width: 100%;
+
+
+}
+
+#presentation article {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    min-height: 500px;
+}
+
+#presentation span {
+    display: block;
+    font-family: 'poppins-bold';
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5% auto;
+    overflow: auto;
+}
+
+#titlePresentation {
+    position: relative;
+}
+
+.orange {
+    color: #DF6951;
+}
+
+#traitJadoo {
+    position: absolute;
+    width: 70%;
+    top: 95%;
+    left: 25%;
+}
+
+.bigtitle {
+    font-size: 3rem;
+    color: #FFF;
+    text-align: center;
+}
+
+#presentation p {
+    text-align: center;
+}
+
+.decouvrir {
+    width: 204px;
+    height: 60px;
+    background: #F1A501;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'poppins-regular';
+    font-style: normal;
+    display: block;
+    transition: all 0.5s ease;
+}
+.decouvrir:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+.gris {
+    color: #BFC0CD;
+}
+
+/*presentation tablet*/
+@media screen and (min-width: 850px) {
+    #presentation {
+        background-size: cover;
+        height: 800px;
+    }
+
+    #presentation article {
+        text-align: left;
+        align-items: flex-start;
+        width: 72%;
+        position: absolute;
+        top: 20%;
+    }
+
+
+
+    .bigtitle {
+        font-size: 5rem;
+        text-align: inherit;
+    }
+
+    #traitJadoo {
+        top: 95%;
+        left: 0%;
+    }
+
+    #presentation p {
+        text-align: left;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    #presentation {
+        background-size: cover;
+        height: 800px;
+    }
+
+    #presentation article {
+        text-align: left;
+        align-items: flex-start;
+        width: 60%;
+        padding-left: 100px;
+        position: absolute;
+        top: 20%;
+    }
+
+    #presentation article p {
+        text-align: left;
+        width: 80%;
+        height: 90px;
+        line-height: 30px;
+
+
+    }
+
+    .bigtitle {
+        font-size: 4rem;
+        text-align: inherit;
+    }
+
+    #traitJadoo {
+        top: 95%;
+        left: 0%;
+    }
+}
+
+
+
+
+
+
+/*section decouvrez phone*/
+.decouvrez {
+    background: url(../img/plus\ etoiles.svg) no-repeat 98% 2%;
+}
+
+#titleDecouvrez {
+    text-align: center;
+    padding: 100px 0 80px 0;
+    overflow: auto;
+}
+
+
+#titleDecouvrez>span {
+    font-family: 'poppins-regular';
+    font-size: 1.1rem;
+    color: #5E6282;
+    font-weight: 600;
+    color: #5e6282;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+#titleDecouvrez h2 {
+    font: "volkhov-bold";
+    font-size: 2.5rem;
+    color: #14183e;
+    margin-top: 10px;
+}
+
+#plat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.plat {
+    width: 300px;
+    height: fit-content;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.descriptionPlat {
+    text-align: center;
+    line-height: 28px;
+    font-size: 18px;
+    font-family: "poppins-regular";
+    font-weight: 500;
+    font-style: normal;
+    padding: 6% 10%;
+    height: 30%;
+}
+
+#sushi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 0;
+
+}
+
+.sushi {
+    width: 350px;
+    height: 300px;
+}
+
+.imgsushi {
+    float: left;
+
+}
+
+.imgsushi img {
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.descriptionSushi {
+    float: right;
+    padding-top: 30px;
+    width: 200px;
+}
+
+.descriptionSushi h3 {
+    font-family: "poppins-bold";
+    color: #1E1D4C;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
+
+.descriptionSushi p {
+    font-size: 1rem;
+    padding-top: 10px;
+
+}
+
+#btsushi {
+    margin: 0 auto 50px auto;
+}
+
+/*decouvrer tablet*/
+@media screen and (min-width: 850px) {
+    #plat {
+        margin: 0 auto;
+    }
+
+    .plat {
+        margin: 0 50px;
+    }
+
+    #sushi {
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .sushi {
+        width: 250px;
+        margin: 0 30px 50px 0;
+        position: relative;
+    }
+
+    .sushi:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        border-radius: 25px;
+    }
+
+    .sushi::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: -35px;
+        left: -35px;
+        opacity: 0;
+        background: url(../img/decoration_rose.svg) no-repeat;
+        background-size: cover;
+        transform: rotate(0);
+        transition: opacity 0.5s, transform 0.5s;
+        transition-delay: 0s;
+        z-index: 1;
+    }
+
+    .sushi:hover::before {
+        transform: rotate(90deg);
+        opacity: 1;
+    }
+
+    .sushi::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 1;
+        background-color: #fff;
+        border-radius: 24px;
+        transition: opacity 0.3s;
+        transition-delay: 0.3s;
+    }
+
+    .sushi:not(:hover) {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .imgsushi {
+        float: none;
+
+    }
+
+    .imgsushi img {
+        max-width: 150px;
+        max-height: 150px;
+        margin-left: 19%;
+        z-index: 9999;
+        position: relative;
+    }
+
+
+    .descriptionSushi {
+        float: none;
+        margin-left: 10%;
+        z-index: 2;
+        position: relative;
+    }
+
+    .descriptionSushi h3 {
+        text-align: center;
+    }
+
+    .descriptionSushi p {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+/*section presenter*/
+#voyage {
+    position: relative;
+}
+
+#imgvideo,
+#chef {
+    width: 100vw;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+}
+
+#imgvideo {
+    width: 100vw;
+
+}
+
+#btplay {
+    position: absolute;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 50%;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#txtvoyage {
+    display: none;
+}
+
+
+#voyage p {
+    font-family: 'poppins-regular';
+    font-size: 1rem;
+    color: #FFF;
+}
+
+#image img {
+    width: 100vw;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* section présenté tablette */
+@media screen and (min-width: 650px) {
+    #voyage {
+        background-image: url(../img/illustration_chef.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 1200px;
+        position: inherit;
+
+
+
+    }
+
+    #video {
+        position: relative;
+        padding: 50px 0;
+        width: fit-content;
+    }
+
+    #imgvideo {
+        display: flex;
+        width: 305px;
+        height: 164px;
+        border-radius: 15px;
+        margin: 50px;
+    }
+
+    #btplay {
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #txtvoyage {
+        display: block;
+        text-align: left;
+        width: 70%;
+        padding: 50px 0 0 50px;
+    }
+
+    #txtvoyage h1 {
+        font-size: 5rem;
+        margin-bottom: 50px;
+        width: fit-content;
+        position: relative;
+    }
+
+    #traitVoyage {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    #chef {
+        display: none;
+    }
+
+    #image {
+        display: flex;
+        position: relative;
+        max-height: 660px;
+        height: 100%;
+        max-width: 1050px;
+        width: 100%;
+    }
+
+    #baguette {
+        left: 0px;
+    }
+
+    #table {
+        right: 0px;
+    }
+
+    #image img {
+        top: -200px;
+        position: absolute;
+        width: 50%;
+        height: 660px;
+    }
+
+}
+
+
+/*section commande*/
+#commande {
+    width: 100%;
+
+}
+
+#titlecommande {
+    text-align: center;
+    margin: 50px auto;
+
+}
+
+#titlecommande>h2 {
+    font-size: 2.2rem;
+    color: #14183E;
+    display: block;
+    margin-top: 10px;
+}
+
+#typedelivery {
+    overflow: auto;
+    width: 100%;
+}
+
+.imgdelivery {
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.imgdelivery img {
+    width: 50px;
+    height: 50px;
+}
+
+.descriptionDelivery {
+
+    margin-left: 15px;
+}
+
+#commande h3 a {
+    font-weight: bold;
+    color: #22232C;
+}
+
+#commande p a {
+    color: #3E3F43;
+}
+
+#btcommande {
+    margin: 30px auto;
+}
+
+/* section commande tablette */
+@media screen and (min-width: 650px) {
+    #commande {
+        background-image: url(../img/illustration_commander.jpg);
+        background-size: cover;
+        padding-top: 100px;
+        width: 100%;
+        overflow: auto;
+    }
+
+    #titlecommande {
+        padding-top: 450px;
+        text-align: left;
+        margin-left: 60px;
+        width: 390px;
+    }
+
+    #titlecommande>h2 {
+        font-size: 3rem;
+    }
+
+    #typedelivery {
+        width: 550px;
+    }
+
+    #btcommande {
+        margin-left: 60px;
+    }
+}
+
+/*formulaire*/
+#formulaire {
+    padding-top: 50px;
+}
+
+#formulaire span {
+    text-align: center;
+    display: block;
+    padding-bottom: 20px;
+}
+
+#formulaire h2 {
+    font-size: 2.2rem;
+    padding-bottom: 60px;
+    font-weight: 900;
+}
+
+#formulaire h3 {
+    text-align: center;
+}
+
+#formulaire h2,
+h4 {
+    text-align: center;
+}
+
+#formulaire h3,
+h4 {
+    padding-bottom: 20px;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.form {
+    padding-bottom: 20px;
+}
+
+form label {
+    line-height: 2rem;
+}
+
+form input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    line-height: 2rem;
+}
+
+#formulaire h2,
+h4,
+label,
+input,
+button {
+    font-family: "poppins-regular";
+}
+
+#formulaire h4 {
+
+    font-size: 1rem;
+    color: #8d8d8d;
+}
+
+.form label,
+input {
+    color: #000;
+    font-style: normal;
+    text-align: left;
+}
+
+#btsend {
+    background-color: #007aff;
+    color: #FFF;
+    font: 1.2rem Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: all .5s ease;
+}
+#btsend:hover {
+    transform: scale(1.2);
+    opacity:0.9;
+}
+
+/* section formulaire tablette */
+@media screen and (min-width: 650px) {
+    #formulaire {
+        width: 100%;
+    }
+
+    #formlr {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        border-radius: 30px;
+        margin: 0 auto;
+        max-width: 1020px;
+        box-shadow: 0px 4px 61px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    #formLeft {
+
+        width: 50%;
+
+    }
+
+    #formLeft h3 {
+        margin-top: 20px;
+    }
+
+    #formLeft h3,
+    h4 {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    #formLeft h3,
+    h4,
+    form {
+        width: 90%;
+    }
+
+    #formLeft form {
+        height: 300px;
+    }
+
+    #formright {
+        background-image: url(../img/illustration_formulaire.jpg);
+        background-size: cover;
+
+        width: 50%;
+        height: 100%;
+    }
+}
+
+/* footer phone  */
+footer {
+    overflow: auto;
+    background-color: #F3F3F3;
+}
+
+#footerHead {
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#footerHead img {
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+
+#linkFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+
+#linkFooter h3,
+a {
+    text-align: left;
+    display: block;
+}
+
+#contact {
+    padding-top: 20px;
+}
+
+#uber a {
+    text-align: center;
+}
+
+#uber img {
+    width: 200px;
+    height: 100px;
+}
+
+#store {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+#store button {
+    display: block;
+    border: 0;
+    transition: all .5s ease;
+
+}
+#store button:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+#droit {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+footer h3 {
+    font-family: 'poppins-bold';
+    text-align: left;
+    font-style: normal;
+    color: #000;
+
+}
+
+footer a {
+    color: #5e6282;
+    ;
+}
+
+/* section footer tablette */
+@media screen and (min-width: 650px) {
+
+    #store {
+        justify-content: center;
+    }
+
+    #store button {
+        margin: 0 10px;
+    }
+
+    #contact {
+        padding-top: 0;
+    }
+
+    #linkFooter {
+        padding-top: 50px;
+    }
+
+}
+
+@media screen and (min-width: 850px) {
+    #linkFooter {
+        padding-top: 0;
+    }
+}
+
+/* section footer tablette */
+@media screen and (min-width: 1150px) {
+    #footer {
+        display: flex;
+        width: 100%;
+
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    #footerHead,
+    #linkFooter,
+    #uberStore {
+        width: 32%;
+        text-align: center;
+    }
+
+    #linkFooter,
+    #uberStore {
+        padding-top: 50px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*général*/
+h1,
+h2 {
+    font-family: 'volkhov-regular';
+
+}
+
+p {
+    font-family: 'poppins-regular';
+}
+
+.format {
+    font-size: 1.2rem;
+    font-style: normal;
+
+    font-weight: 600;
+    color: #5E6282;
+    font-family: 'poppins-regular';
+}
+
+a {
+    font-family: 'poppins-regular';
+    font-style: normal;
+    text-decoration: none;
+}
